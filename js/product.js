@@ -13,15 +13,11 @@ $(document).ready(function(){
             localStorage.setItem("clicked_item",index);
         })
     });
-    $(".block2-price").each(function(index,price){
+    $(".block2-price, .block2-newprice").each(function(index,price){
         productObject.price[index] = parseFloat(String(price.innerHTML).replace("$","").trim());
         productObject.priceStr[index] = String(price.innerHTML).trim();
     });
 
-    $(".block2-newprice").each(function(index,price){
-        productObject.price.push(parseFloat(String(price.innerHTML).replace("$","").trim()))
-        productObject.priceStr.push(String(price.innerHTML).trim());
-    });
 
     // Search 
     $(".search-product > input").on("keyup",function(){
