@@ -52,17 +52,21 @@ $(document).ready(function(){
 })
 window.onload = function(){
     document.getElementById('filter-bar').noUiSlider.on("end",function(){
+        if (document.getElementById("search-box").value != ""){
         var lowerValue = parseInt(String(document.getElementById("value-lower").innerText).replace("$","").trim());
         var upperValue = parseInt(String(document.getElementById("value-upper").innerText).replace("$","").trim());
         document.querySelectorAll(".block2").forEach(function(element,index){
             if( lowerValue >= parseInt(productObject.price[index]) &&  parseInt(productObject.price[index]) <= upperValue){
-                console.log(productObject.price[index]);
-                element.style.display = 'block'
+                element.style.display = 'block';
             }else{
-                element.style.display = 'none'
+                element.style.display = 'none';
             }
-
-            
         });
+    }else{
+        document.querySelectorAll(".block2").forEach(function(element,index){
+          
+                element.style.display = 'block';
+        });
+    }
     })
 }
