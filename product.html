@@ -1155,12 +1155,13 @@
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
 	<script type="text/javascript">
-		$(".selection-1").select2({
+		var $selection1 =  $(".selection-1");
+		$selection1.select2({
 			minimumResultsForSearch: 20,
 			dropdownParent: $('#dropDownSelect1')
 		});
-
-		$(".selection-2").select2({
+		var $selection2 =  $(".selection-2");
+		$selection2.select2({
 			minimumResultsForSearch: 20,
 			dropdownParent: $('#dropDownSelect2')
 		});
