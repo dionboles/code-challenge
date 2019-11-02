@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/whitebox-co/code-challenge#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "axois": "^1.0.0"
   }
 }
